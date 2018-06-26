@@ -1,14 +1,29 @@
+require 'singleton'
+
 class Piece
 
-  def initialize(type)
-    @type = type
+  def initialize
+
+  end
+
+  def to_s
+    " x "
+
   end
 
 end
 
 
 class NullPiece < Piece
+
+  include Singleton
+
   def initialize
-    @type = nil
+
   end
+
+  def to_s
+    " _ "
+  end
+
 end
